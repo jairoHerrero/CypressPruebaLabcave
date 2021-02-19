@@ -1,0 +1,23 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "Pruebas de cypress",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^6.5.0",
+    "git": "^0.1.5",
+    "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "start-server-and-test": "^1.12.0"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "start": "my-server -p 5000",
+    "test": "start-server-and-test start http://localhost:5000 cy:run",
+    "ci": "start-server-and-test http://localhost:5000"
+  },
+  "author": "Jairo Herrero",
+  "license": "ISC"
+}
